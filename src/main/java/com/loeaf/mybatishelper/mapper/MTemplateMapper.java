@@ -2,6 +2,7 @@ package com.loeaf.mybatishelper.mapper;
 
 import com.loeaf.mybatishelper.model.MTemplate;
 
+
 public interface MTemplateMapper {
     int deleteByPrimaryKey(String id);
 
