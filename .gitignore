@@ -32,6 +32,6 @@ build/
 
 ### VS Code ###
 .vscode/
-/src/main/resources/application.*
+/src/main/resources/application.properties.bak
 application.properties
 sejong_rst_meet.csv
