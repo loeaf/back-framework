@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.loeaf</groupId>
-    <artifactId>ivfm</artifactId>
+    <artifactId>sample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ivfm</name>
+    <name>sample</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

@@ -20,9 +20,7 @@ public class Domain {
      * 안녕 아이디
      */
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "id")
-    protected Long id;
+    protected String id;
 
     @CreationTimestamp
     @Column(name = "regist_datetime")
