@@ -5,9 +5,7 @@ import com.loeaf.template.model.Template;
 import com.loeaf.template.repository.TemplateRepository;
 import com.loeaf.template.service.TemplateService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.thymeleaf.engine.TemplateManager;
 
 import javax.annotation.PostConstruct;
 
