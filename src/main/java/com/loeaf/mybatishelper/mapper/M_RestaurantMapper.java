@@ -1,7 +1,9 @@
 package com.loeaf.mybatishelper.mapper;
 
 import com.loeaf.mybatishelper.model.M_Restaurant;
+import org.apache.ibatis.annotations.Param;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -17,4 +19,9 @@ public interface M_RestaurantMapper {
     int updateByPrimaryKeySelective(M_Restaurant record);
 
     int updateByPrimaryKey(M_Restaurant record);
+
+    List<M_Restaurant> selectData(
+            @Param("dates") List<LocalDateTime> dates,
+            @Param("times") List<Integer> times
+    );
 }

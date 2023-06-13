@@ -352,4 +352,16 @@
       modified_datetime = #{modifiedDatetime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=VARCHAR}
   </update>
+
+  <select id="selectData" resultMap="BaseResultMap">
+    select * from restaurant
+    WHERE date(reg_date) IN
+    <foreach item="date" collection="dates" open="(" separator="," close=")">
+      #{date}
+    </foreach>
+    AND DATE_PART('HOUR', reg_date) IN
+    <foreach item="time" collection="times" open="(" separator="," close=")">
+      #{time}
+    </foreach>
+  </select>
 </mapper>

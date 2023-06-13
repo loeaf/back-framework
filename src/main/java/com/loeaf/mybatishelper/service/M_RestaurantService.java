@@ -19,4 +19,9 @@ public interface M_RestaurantService{
 
     int updateByPrimaryKey(M_Restaurant record);
 
+    List<M_Restaurant> selectData(
+            List<String> dates,
+            List<String> times
+    );
+
 }

@@ -1,4 +1,5 @@
 package com.loeaf.mybatishelper.controller;
+import com.loeaf.mybatishelper.dto.param.M_RestaurantParam;
 import com.loeaf.mybatishelper.model.M_Restaurant;
 import com.loeaf.mybatishelper.service.impl.M_RestaurantServiceImpl;
 import org.springframework.web.bind.annotation.*;
@@ -19,5 +20,16 @@ public class M_RestaurantController {
         System.out.println(result);
         System.out.println("====================================");
     return result;
+    }
+
+    @PostMapping("selectData")
+    public List<M_Restaurant> selectData(
+            @RequestBody M_RestaurantParam param
+    ) {
+        var result = m_RestaurantServiceImpl.selectData(param.getDateList(), param.getTimes());
+        System.out.println("====================================");
+        System.out.println(result);
+        System.out.println("====================================");
+        return result;
     }
 }
