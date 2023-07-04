@@ -355,13 +355,21 @@
 
   <select id="selectData" resultMap="BaseResultMap">
     select * from restaurant
-    WHERE date(reg_date) IN
-    <foreach item="date" collection="dates" open="(" separator="," close=")">
-      #{date}
-    </foreach>
-    AND DATE_PART('HOUR', reg_date) IN
-    <foreach item="time" collection="times" open="(" separator="," close=")">
-      #{time}
-    </foreach>
+    <where>
+      <if test="dates != null and dates.size() != 0">
+        AND
+        date(reg_date) IN
+        <foreach item="date" collection="dates" open="(" separator="," close=")">
+          #{date}
+        </foreach>
+      </if>
+      <if test="times != null and times.size() != 0">
+        AND
+        DATE_PART('HOUR', reg_date) IN
+        <foreach item="time" collection="times" open="(" separator="," close=")">
+          #{time}
+        </foreach>
+      </if>
+    </where>
   </select>
 </mapper>
